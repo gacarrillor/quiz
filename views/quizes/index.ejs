@@ -6,7 +6,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <table>
+    <form method="get" action="/quizes">
+      <input type="text" name="search"/>
+      <input type="submit" value="enviar"/>
+    </form>
+    <table id="tablaPreguntas">
       <% var i; for (i=0; i< quizes.length; i++) { %>
         <tr><td>
           <a href="quizes/<%= quizes[i].id %>">

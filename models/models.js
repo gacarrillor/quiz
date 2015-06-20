@@ -36,7 +36,19 @@ sequelize.sync().then(function(){
       });
       Quiz.create({ pregunta: 'Capital de Portugal',
                     respuesta: 'Lisboa'      
-      })
+      });
+      Quiz.create({ pregunta: 'Río más largo del mundo',
+                    respuesta: 'Amazonas'      
+      });
+      Quiz.create({ pregunta: 'Último campeón de Copa América',
+                    respuesta: 'Uruguay'      
+      });
+      Quiz.create({ pregunta: 'Último campeón de Copa Mundo',
+                    respuesta: 'Alemania'      
+      });
+      Quiz.create({ pregunta: 'Río más importante de Colombia',
+                    respuesta: 'Magdalena'      
+      })      
       .then(function(){console.log('BD inicializada')});
     }
   });
