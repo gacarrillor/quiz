@@ -7,3 +7,4 @@ section > div     { padding:20px; }
 header, nav, section, footer {background: #eee; text-align: center;}
 nav span          { margin: 0px 10px 0px 0px; }
 #tablaPreguntas   { margin: 20px auto; }
+#ErrorMsgs        { color: #f61; font-size: smaler; }
