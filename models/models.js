@@ -32,22 +32,28 @@ sequelize.sync().then(function(){
   Quiz.count().then(function(count){
     if (count===0) { // Si la tabla está vacía, se inicializa
       Quiz.create({ pregunta: 'Capital de Italia',
-                    respuesta: 'Roma'      
+                    respuesta: 'Roma',
+                    tema: 'Geografía'    
       });
       Quiz.create({ pregunta: 'Capital de Portugal',
-                    respuesta: 'Lisboa'      
+                    respuesta: 'Lisboa',
+                    tema: 'Geografía'
       });
       Quiz.create({ pregunta: 'Río más largo del mundo',
-                    respuesta: 'Amazonas'      
+                    respuesta: 'Amazonas',
+                    tema: 'Geografía'
       });
       Quiz.create({ pregunta: 'Último campeón de Copa América',
-                    respuesta: 'Uruguay'      
+                    respuesta: 'Uruguay',
+                    tema: 'Deportes'     
       });
       Quiz.create({ pregunta: 'Último campeón de Copa Mundo',
-                    respuesta: 'Alemania'      
+                    respuesta: 'Alemania',
+                    tema: 'Deportes'
       });
       Quiz.create({ pregunta: 'Río más importante de Colombia',
-                    respuesta: 'Magdalena'      
+                    respuesta: 'Magdalena',
+                    tema: 'Geografía'
       })      
       .then(function(){console.log('BD inicializada')});
     }

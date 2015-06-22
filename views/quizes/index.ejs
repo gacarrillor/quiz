@@ -8,13 +8,13 @@
   <body>
     <form method="get" action="/quizes">
       <input type="text" name="search"/>
-      <input type="submit" value="enviar"/>
+      <input type="submit" value="Buscar"/>
     </form>
     <table id="tablaPreguntas">
       <% var i; for (i=0; i< quizes.length; i++) { %>
         <tr>
           <td>
-            <a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a>
+            <a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta + " (" + quizes[i].tema + ")" %></a>
           </td>
           <td>
             <a href="quizes/<%= quizes[i].id %>/edit"><button>editar</button></a>
