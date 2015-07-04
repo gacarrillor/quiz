@@ -37,6 +37,25 @@ app.use(function(req, res, next){
   next();  
 });
 
+app.use(function(req, res, next){
+  // Guardar hora de la última interacción dentro de la sesión
+  if (req.session.user) { // Only for sessions
+    if (!req.session.time){ // First access?
+      req.session.time = new Date().getTime();
+    } else { // We have a session.time already
+      if (new Date() - req.session.time >= 120000){ // Destroy session
+        delete req.session.user;
+        delete req.session.time;
+        res.redirect(req.session.redir.toString());
+        return;
+      } else {
+        req.session.time = new Date().getTime(); // Renew session time
+      }
+    }
+  }
+  next();
+});
+
 app.use('/', routes);
 //app.use('/users', users);
 
