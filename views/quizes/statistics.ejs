@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Quiz</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h2>Estadísticas</h2><br />
+    Número de preguntas: <%= stats.quizes %> <br />
+    Número de comentarios: <%= stats.comments %><br />
+    Número de comentarios por pregunta: <%= stats.commentsPerQuiz %><br />
+    Número de preguntas sin comentarios: <%= stats.quizesWithNoComment %><br />
+    Número de preguntas con comentarios: <%= stats.quizesWithComment %>
+  </body>
+</html>

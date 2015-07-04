@@ -35,6 +35,7 @@ exports.create = function(req, res){
 // DELETE /logout
 exports.destroy = function(req, res){
   delete req.session.user;
+  delete req.session.time; // We want "time" also to be deleted and not to cause problems when relogin
   res.redirect(req.session.redir.toString());
 };
 
